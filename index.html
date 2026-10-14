@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Image Gallery - Code Alpha Task 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Interactive Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button class="btn active" onclick="filterGallery('all')">All</button>
+    <button class="btn" onclick="filterGallery('nature')">Nature</button>
+    <button class="btn" onclick="filterGallery('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item nature" onclick="openLightbox(0)">
+      <img src="https://picsum.photos/id/1018/600/400" alt="Nature 1">
+    </div>
+    <div class="gallery-item city" onclick="openLightbox(1)">
+      <img src="https://picsum.photos/id/1011/600/400" alt="City 1">
+    </div>
+    <div class="gallery-item nature" onclick="openLightbox(2)">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Nature 2">
+    </div>
+    <div class="gallery-item city" onclick="openLightbox(3)">
+      <img src="https://picsum.photos/id/1040/600/400" alt="City 2">
+    </div>
+  </div>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <img id="lightbox-img" src="" alt="Enlarged View">
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
